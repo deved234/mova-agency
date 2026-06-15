@@ -1,0 +1,6 @@
+{
+  "name": "MOVA Portfolio",
+  "description": "MOVA Video Editing Services professional agency landing page with interactive portfolio showcase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

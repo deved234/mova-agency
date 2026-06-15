@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #D4FF00;
+  --color-dark-bg: #000000;
+  --color-card-bg: #0A0A0A;
+  --color-gray-text: #A1A1AA;
+  --font-sans: 'Inter', sans-serif;
+}
+
+html,
+body,
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  min-width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.neon-text {
+  color: #D4FF00;
+}
+
+.neon-border {
+  border-color: #D4FF00;
+}
+
+.hero-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(212, 255, 0, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+}
+
+/* Brand utilities (used throughout the app) */
+.bg-brand {
+  background-color: var(--color-brand) !important;
+}
+
+.text-brand {
+  color: var(--color-brand) !important;
+}
+
+.border-brand {
+  border-color: var(--color-brand) !important;
+}
+
+.shadow-brand {
+  box-shadow: 0 8px 30px rgba(212, 255, 0, 0.12);
+}
+
+/* Card background utility */
+.bg-cardBg {
+  background-color: var(--color-card-bg);
+}
+
+/* Small helpers for neon gradient text used in the hero */
+.brand-gradient {
+  background-image: linear-gradient(90deg, var(--color-brand) 0%, #b7ff5a 60%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.z-10-fade {
+  z-index: 10;
+}
+
+.z-10-fade-top {
+  z-index: 11;
+}
+
+/* Floating stat pill style */
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.bg-neutral-900\/50 {
+  background-color: rgba(7, 7, 7, 0.5);
+}
+
+.border-white\/5 {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Hero responsive tweaks */
+.hero-title {
+  font-size: clamp(28px, 5.5vw, 76px) !important;
+  line-height: 1.03 !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: clamp(36px, 5.8vw, 88px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    text-align: left;
+    padding-right: 1rem;
+  }
+}
