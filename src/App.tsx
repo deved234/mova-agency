@@ -1,25 +1,15 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import {
-  Video,
-  Building2,
-  TrendingUp,
-  Users,
-  ChevronRight,
-  Flame,
-  Info,
-  CalendarDays,
-  Menu,
-  Heart,
-  Pill,
-  Sparkles,
-  ArrowUpRight,
-  Sparkle,
-  X
+  Video, Building2, TrendingUp, Users,
+  ChevronRight, Flame, Info, CalendarDays,
+  Menu, Heart, Pill, Sparkles, ArrowUpRight,
+  Sparkle, X, LayoutDashboard, Music, PlayCircle
 } from 'lucide-react';
 import { CAMPAIGNS, Campaign } from './data';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 import BookingModal from './components/BookingModal';
+import heroImg from './images/ChatGPT Image Jun 15, 2026, 02_18_24 AM.png';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
@@ -110,109 +100,102 @@ export default function App() {
       )}
 
       {/* HERO SECTION */}
-      <main className="relative pt-28 sm:pt-36 md:pt-40 pb-20 md:pb-32 overflow-hidden min-h-[80vh] flex flex-col justify-center" id="hero-segment">
+      <main className="relative pt-24 md:pt-24 pb-0 overflow-hidden min-h-screen flex flex-col justify-center" id="hero-segment">
         
-        {/* Full-bleed Background Mascot Wallpaper */}
-        <div className="absolute inset-0 z-0 select-none overflow-hidden" id="hero-bg-media">
-          <img
-            alt="MOVA Hero Cybernetic Background Wallpaper"
-            className="w-full h-full object-cover object-[75%_center] lg:object-[center_right] opacity-100 md:opacity-100 transition-all duration-700"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoBd2ncdKvzPMtgSSOfe5C3hgrLkeFP7NezcGOHsZaGMu8ZDY5AzOKnSMtw47C4aoMTwzsIV_Bt345zdJThuZhIlPS5-miHtw01bGl-z237AEr-xp2pwQrvcLo0c7f86_2moiPmivT1R1LNPkjo42MgVH58xUzeGN2KhtMbwvYTAtA0iYu0u-6TLKLdDLFucl78sokgt7JRvHUeC4ejgIrxYXtYB8VlM_ZsrtaOl5XWK8M4Rh8bzi5WTCO3Z19MG-pVMhBMEwEDy8"
-            referrerPolicy="no-referrer"
-          />
-          {/* Subtle dual gradient filters to guarantee premium typography contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 md:via-black/75 to-transparent z-10-fade"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30 z-10-fade-top"></div>
-        </div>
-
         <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 w-full flex-grow flex flex-col justify-center">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pb-12 sm:pb-16">
-            
+          <div className="grid grid-cols-1 md:grid-cols-[0.9fr_1.8fr_0.75fr] xl:grid-cols-[0.85fr_2fr_0.7fr] gap-6 items-stretch pb-6">
             {/* Left Content Column */}
-            <div className="lg:col-span-8 xl:col-span-7 text-left" id="hero-headline-left">
+            <div className="lg:col-span-1 text-left flex flex-col justify-center pt-4 md:pt-0" id="hero-headline-left">
               <div className="flex items-center gap-3 mb-6 md:mb-8">
                 <span className="w-3 h-3 rounded-full bg-brand shadow-[0_0_12px_rgba(212,255,0,0.9)] animate-pulse"></span>
                 <span className="text-brand uppercase tracking-[0.3em] text-xs md:text-sm font-black">
-                  Video Editing Agency
+                  VIDEO EDITING
                 </span>
               </div>
-
-            
-            {/* Floating Right Stats (desktop) */}
-            <div className="hidden lg:flex flex-col gap-4 absolute right-10 top-24 z-30" id="hero-stats-floating">
-              <div className="px-4 py-3 rounded-full border border-white/5 bg-neutral-900/50 flex items-center gap-4">
-                <div className="stat-icon">
-                  <Video className="w-5 h-5 text-brand" />
-                </div>
-                <div className="text-left">
-                  <div className="text-brand font-black text-lg">100+</div>
-                  <div className="text-[11px] text-gray-400 uppercase tracking-widest">Videos Edited</div>
-                </div>
-              </div>
-
-              <div className="px-4 py-3 rounded-full border border-white/5 bg-neutral-900/50 flex items-center gap-4">
-                <div className="stat-icon">
-                  <Users className="w-5 h-5 text-brand" />
-                </div>
-                <div className="text-left">
-                  <div className="text-brand font-black text-lg">10+</div>
-                  <div className="text-[11px] text-gray-400 uppercase tracking-widest">Industries Served</div>
-                </div>
-              </div>
-
-              <div className="px-4 py-3 rounded-full border border-white/5 bg-neutral-900/50 flex items-center gap-4">
-                <div className="stat-icon">
-                  <TrendingUp className="w-5 h-5 text-brand" />
-                </div>
-                <div className="text-left">
-                  <div className="text-brand font-black text-lg">2M+</div>
-                  <div className="text-[11px] text-gray-400 uppercase tracking-widest">Total Views</div>
-                </div>
-              </div>
-
-              <div className="px-4 py-3 rounded-full border border-white/5 bg-neutral-900/50 flex items-center gap-4">
-                <div className="stat-icon">
-                  <CalendarDays className="w-5 h-5 text-brand" />
-                </div>
-                <div className="text-left">
-                  <div className="text-brand font-black text-lg">120%</div>
-                  <div className="text-[11px] text-gray-400 uppercase tracking-widest">Avg. Engagement</div>
-                </div>
-              </div>
-            </div>
-              <h1 className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.05] mb-6 md:mb-8 uppercase tracking-tighter">
+              <h1 className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-black leading-[1.05] mb-6 md:mb-8 uppercase tracking-tighter">
                 ONE VIDEO.<br/>
                 TWICE THE <span className="text-brand text-transparent bg-clip-text bg-gradient-to-r from-brand to-lime-300 animate-pulse">IMPACT.</span>
               </h1>
 
-              <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-10 md:mb-12 max-w-xl leading-relaxed font-semibold backdrop-blur-[2px] bg-black/10 rounded-lg py-1">
-                We turn raw phone reels and dusty footage into scroll-stopping social content that connects, engages, and explodes conversions.
+              <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-10 md:mb-12 max-w-sm leading-relaxed font-medium">
+                We turn raw clips into scroll-stopping content that connects, engages, and converts.
               </p>
 
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#work-section"
-                  className="inline-flex items-center gap-3 bg-brand text-black px-7 py-4 rounded-xl font-black text-sm md:text-base hover:bg-white hover:shadow-[0_0_20px_rgba(212,255,0,0.4)] transition-all group shadow-lg cursor-pointer animate-none"
+                  className="inline-flex items-center gap-3 border border-brand text-brand px-7 py-4 rounded-xl font-black text-sm md:text-base hover:bg-brand hover:text-black transition-all group cursor-pointer"
                 >
-                  Explore Work
-                  <ChevronRight className="h-4.5 w-4.5 transform group-hover:translate-x-1.5 transition-transform stroke-[2.5]" />
+                  See Editing Style
+                  <ChevronRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform stroke-[3]" />
                 </a>
+              </div>
+            </div>
 
-                <button
-                  onClick={() => handleOpenBooking('General')}
-                  className="inline-flex items-center gap-3 bg-neutral-900/90 border border-white/10 text-gray-300 px-7 py-4 rounded-xl font-bold text-sm md:text-base hover:bg-neutral-800 hover:text-white transition-all backdrop-blur-md cursor-pointer"
-                >
-                  Book a Call
-                </button>
+            {/* Center Hero Image */}
+            <div className="md:col-span-1 xl:col-span-1 flex justify-center items-stretch">
+              <div className="relative w-full min-h-[60vh] md:min-h-[75vh] xl:min-h-[82vh] overflow-hidden">
+                <img
+                  alt="MOVA Hero Mascot"
+                  className="w-full h-full object-cover object-top"
+                  src={heroImg}
+                />
+              </div>
+            </div>
+
+            {/* Right Stats Column */}
+            <div className="md:col-span-1 xl:col-span-1 flex flex-col gap-8 justify-center pt-8 md:pt-0 items-start">
+              {/* Stat 1 */}
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full border border-brand/40 flex items-center justify-center shrink-0 bg-brand/5">
+                  <Video className="w-5 h-5 text-brand" />
+                </div>
+                <div>
+                  <div className="text-white font-black text-2xl leading-none">100+</div>
+                  <div className="text-gray-400 text-xs mt-1">Videos Edited</div>
+                </div>
+              </div>
+
+              {/* Stat 2 */}
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full border border-brand/40 flex items-center justify-center shrink-0 bg-brand/5">
+                  <Building2 className="w-5 h-5 text-brand" />
+                </div>
+                <div>
+                  <div className="text-white font-black text-2xl leading-none">10+</div>
+                  <div className="text-gray-400 text-xs mt-1">Industries Served</div>
+                </div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full border border-brand/40 flex items-center justify-center shrink-0 bg-brand/5">
+                  <TrendingUp className="w-5 h-5 text-brand" />
+                </div>
+                <div>
+                  <div className="text-white font-black text-2xl leading-none">2M+</div>
+                  <div className="text-gray-400 text-xs mt-1">Total Views Generated</div>
+                </div>
+              </div>
+
+              {/* Stat 4 */}
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full border border-brand/40 flex items-center justify-center shrink-0 bg-brand/5">
+                  <CalendarDays className="w-5 h-5 text-brand" />
+                </div>
+                <div>
+                  <div className="text-white font-black text-2xl leading-none">120%</div>
+                  <div className="text-gray-400 text-xs mt-1">Avg. Engagement Increase</div>
+                </div>
               </div>
             </div>
 
           </div>
         </div>
 
-        {/* FLOATING FILTER BAR (BOTTOM OF HERO) */}
-        <div className="relative mx-auto w-full max-w-[1100px] px-6 z-20 translate-y-6">
-          <div className="bg-neutral-950/80 border border-white/5 backdrop-blur-2xl p-2.5 rounded-2xl flex flex-wrap justify-center sm:justify-between items-center gap-2">
+        {/* FILTER BAR */}
+        <div className="relative w-full z-20 mt-8">
+          <div className="bg-[#0a0a0a] border-t border-b border-white/5 px-6 md:px-10 py-3 flex flex-wrap justify-start md:justify-center items-center gap-2 max-w-[1440px] mx-auto">
             
             <button
               onClick={() => setSelectedCategory('all')}
@@ -409,66 +392,81 @@ export default function App() {
       </section>
 
       {/* PROCESS OF EDITING STEP-BY-STEP */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-10 mb-32" id="process-section">
-        <div className="border border-white/5 bg-neutral-950/40 backdrop-blur-md rounded-[40px] md:rounded-[60px] p-8 md:p-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-16 items-center">
-            
-            <div className="lg:col-span-1 text-center lg:text-left">
-              <span className="text-[10px] font-black uppercase text-brand tracking-widest bg-brand/5 border border-brand/20 px-3 py-1 rounded-full mb-3.5 inline-block">
-                How We Deliver
-              </span>
-              <h2 className="text-3xl md:text-5xl font-black mb-6 leading-tight uppercase tracking-tighter">
-                Our Editing<br/><span className="text-brand">Process</span>
-              </h2>
-              <p className="text-gray-400 text-xs md:text-base font-medium leading-relaxed max-w-[280px] mx-auto lg:mx-0">
-                A perfect blend of active human creativity, pacing strategies, and visual precision to deliver maximum-retention results.
-              </p>
-            </div>
+<section className="max-w-[1440px] mx-auto px-6 md:px-10 mb-32" id="process-section">
+  <div className="border border-white/5 bg-neutral-950/60 backdrop-blur-md rounded-[24px] p-8 md:p-12">
+    <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-10 lg:gap-16 items-center">
+      
+      {/* Left Header */}
+      <div className="text-left">
+        <h2 className="text-2xl md:text-3xl font-black leading-tight uppercase tracking-tight mb-4">
+          <span className="text-brand">OUR EDITING</span><br/>
+          PROCESS
+        </h2>
+        <p className="text-gray-400 text-xs md:text-sm font-medium leading-relaxed">
+          A perfect blend of creativity, strategy, and precision.
+        </p>
+      </div>
 
-            <div className="lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-10">
-              
-              {/* Step 1 */}
-              <div className="flex flex-col items-center text-center max-w-[200px] group">
-                <div className="w-20 h-20 rounded-full border-2 border-brand/20 flex items-center justify-center mb-6 bg-brand/5 group-hover:bg-brand group-hover:text-black transition-all duration-300 group-hover:scale-110 group-hover:border-brand shadow-2xl shrink-0">
-                  <Video className="w-8 h-8" />
-                </div>
-                <h4 className="font-black text-sm uppercase mb-2 tracking-wide text-white">1. Raw Footage</h4>
-                <p className="text-xs text-gray-400 font-semibold leading-relaxed">
-                  You drop unedited, raw cell or DSLR footage in our secure drive portal.
-                </p>
-              </div>
+      {/* Steps Row */}
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
 
-              <div className="hidden md:block flex-1 h-[2px] border-b-2 border-dashed border-brand/25"></div>
-
-              {/* Step 2 */}
-              <div className="flex flex-col items-center text-center max-w-[200px] group">
-                <div className="w-20 h-20 rounded-full border-2 border-brand/20 flex items-center justify-center mb-6 bg-brand/5 group-hover:bg-brand group-hover:text-black transition-all duration-300 group-hover:scale-110 group-hover:border-brand shadow-2xl shrink-0">
-                  <Menu className="w-8 h-8" />
-                </div>
-                <h4 className="font-black text-sm uppercase mb-2 tracking-wide text-white">2. Story & Flow</h4>
-                <p className="text-xs text-gray-400 font-semibold leading-relaxed">
-                  We write the pacing flow, slice silence cuts, and retain the strongest retention hook.
-                </p>
-              </div>
-
-              <div className="hidden md:block flex-1 h-[2px] border-b-2 border-dashed border-brand/25"></div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col items-center text-center max-w-[200px] group">
-                <div className="w-20 h-20 rounded-full border-2 border-brand/20 flex items-center justify-center mb-6 bg-brand/5 group-hover:bg-brand group-hover:text-black transition-all duration-300 group-hover:scale-110 group-hover:border-brand shadow-2xl shrink-0">
-                  <Sparkle className="w-8 h-8" />
-                </div>
-                <h4 className="font-black text-sm uppercase mb-2 tracking-wide text-white">3. Edit & Enhance</h4>
-                <p className="text-xs text-gray-400 font-semibold leading-relaxed">
-                  Adding premium sound effects, glow ramps, subtitle engines, and dynamic zooms.
-                </p>
-              </div>
-
-            </div>
-
+        {/* Step 1 */}
+        <div className="flex flex-col items-center text-center max-w-[130px]">
+          <div className="w-16 h-16 rounded-full border-2 border-brand flex items-center justify-center mb-4 shrink-0">
+            <Video className="w-7 h-7 text-brand" />
           </div>
+          <h4 className="font-black text-xs uppercase mb-1 tracking-wide text-white">1. Raw Footage</h4>
+          <p className="text-[11px] text-gray-500 font-medium leading-tight">Unfiltered & Uncut</p>
         </div>
-      </section>
+
+        <div className="hidden md:block flex-1 h-[1px] border-t-2 border-dashed border-brand/40 mx-1"></div>
+
+        {/* Step 2 */}
+        <div className="flex flex-col items-center text-center max-w-[130px]">
+          <div className="w-16 h-16 rounded-full border-2 border-brand flex items-center justify-center mb-4 shrink-0">
+            <LayoutDashboard className="w-7 h-7 text-brand" />
+          </div>
+          <h4 className="font-black text-xs uppercase mb-1 tracking-wide text-white">2. Story & Structure</h4>
+          <p className="text-[11px] text-gray-500 font-medium leading-tight">We build the flow</p>
+        </div>
+
+        <div className="hidden md:block flex-1 h-[1px] border-t-2 border-dashed border-brand/40 mx-1"></div>
+
+        {/* Step 3 */}
+        <div className="flex flex-col items-center text-center max-w-[130px]">
+          <div className="w-16 h-16 rounded-full border-2 border-brand flex items-center justify-center mb-4 shrink-0">
+            <Sparkle className="w-7 h-7 text-brand" />
+          </div>
+          <h4 className="font-black text-xs uppercase mb-1 tracking-wide text-white">3. Edit & Enhance</h4>
+          <p className="text-[11px] text-gray-500 font-medium leading-tight">Cut, effects, color</p>
+        </div>
+
+        <div className="hidden md:block flex-1 h-[1px] border-t-2 border-dashed border-brand/40 mx-1"></div>
+
+        {/* Step 4 */}
+        <div className="flex flex-col items-center text-center max-w-[130px]">
+          <div className="w-16 h-16 rounded-full border-2 border-brand flex items-center justify-center mb-4 shrink-0">
+            <Music className="w-7 h-7 text-brand" />
+          </div>
+          <h4 className="font-black text-xs uppercase mb-1 tracking-wide text-white">4. Sound & Music</h4>
+          <p className="text-[11px] text-gray-500 font-medium leading-tight">Audio that fits</p>
+        </div>
+
+        <div className="hidden md:block flex-1 h-[1px] border-t-2 border-dashed border-brand/40 mx-1"></div>
+
+        {/* Step 5 */}
+        <div className="flex flex-col items-center text-center max-w-[130px]">
+          <div className="w-16 h-16 rounded-full border-2 border-brand flex items-center justify-center mb-4 shrink-0">
+            <PlayCircle className="w-7 h-7 text-brand" />
+          </div>
+          <h4 className="font-black text-xs uppercase mb-1 tracking-wide text-white">5. Final Output</h4>
+          <p className="text-[11px] text-gray-500 font-medium leading-tight">Ready to perform</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CTA FOOTER BOOKING PREVIEW ROW */}
       <footer className="max-w-[1440px] mx-auto px-6 md:px-10 mb-20" id="footer-segment">
