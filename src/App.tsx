@@ -10,7 +10,7 @@ import { CAMPAIGNS, Campaign } from './data';
 import BeforeAfterSlider from './components/BeforeAfterSlider';
 import BookingModal from './components/BookingModal';
 import heroImg from './images/ChatGPT Image Jun 15, 2026, 02_18_24 AM.png';
-
+import movaLogo from './images/Asset 2@4x.png';
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -42,8 +42,8 @@ export default function App() {
           <div className="flex items-center">
             <img
               alt="MOVA Logo"
-              className="h-20 md:h-25 hover:brightness-125 transition-all cursor-pointer"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_05rDrqvx5XehLlmFYB9bjh6InMSZx8RZ_FXkyw_BkDNmu4JpzYonR2DCV_Jc1ZB35y_ij7D2G2ObxvLELIRkrC2obMJVimpXAlzPgun4Jh2AKattzKsKBFM5jy7s54H09QOxdElNCt5vG7varK7kils-grOeDWmTRQ9l_T_bRX9MBwCLxz_2ruZutk_LkKJfPzMVOxrc47D80oXirIPnfRyRUtzUOpJnqPK9448A6CGmdVYts0cDYDF28g6WtPD7ymHnyPH3PcE"
+              className="h-7 md:h-10 hover:brightness-125 transition-all cursor-pointer"
+              src={movaLogo}
               referrerPolicy="no-referrer"
             />
           </div>
@@ -80,7 +80,7 @@ export default function App() {
         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md p-6 lg:hidden" role="dialog" aria-modal="true">
           <div className="max-w-md mx-auto">
             <div className="flex items-center justify-between mb-6">
-              <img alt="MOVA" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_05rDrqvx5XehLlmFYB9bjh6InMSZx8RZ_FXkyw_BkDNmu4JpzYonR2DCV_Jc1ZB35y_ij7D2G2ObxvLELIRkrC2obMJVimpXAlzPgun4Jh2AKattzKsKBFM5jy7s54H09QOxdElNCt5vG7varK7kils-grOeDWmTRQ9l_T_bRX9MBwCLxz_2ruZutk_LkKJfPzMVOxrc47D80oXirIPnfRyRUtzUOpJnqPK9448A6CGmdVYts0cDYDF28g6WtPD7ymHnyPH3PcE" className="h-10" referrerPolicy="no-referrer" />
+              <img alt="MOVA" src={movaLogo} className="h-10" referrerPolicy="no-referrer" />
               <button onClick={() => setMobileMenuOpen(false)} className="p-2 rounded-md border border-white/5">
                 <X className="w-5 h-5" />
               </button>
@@ -192,7 +192,100 @@ export default function App() {
 
           </div>
         </div>
+        {/* WHO WE ARE — PARTNERS SECTION */}
+<section className="relative py-24 md:py-32 overflow-hidden" id="about-section">
+  {/* Subtle bg glow */}
+  <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand/5 blur-[120px]" />
+  </div>
 
+  <div className="max-w-[1440px] mx-auto px-6 md:px-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+
+      {/* LEFT — Headline */}
+      <div>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-8 h-[2px] bg-brand" />
+          <span className="text-brand uppercase tracking-[0.3em] text-xs font-black">Who We Are</span>
+        </div>
+
+        <h2 className="text-5xl md:text-6xl xl:text-7xl font-black leading-[1.0] uppercase tracking-tight mb-8">
+          3 PARTNERS.<br />
+          3 SPECIALTIES.<br />
+          <span className="text-brand">1 MISSION.</span>
+        </h2>
+
+        <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-10 max-w-sm">
+          We're 3 young partners with different skills and one goal: to move your brand forward.
+        </p>
+
+        <button
+          onClick={() => handleOpenBooking('General')}
+          className="inline-flex items-center gap-3 bg-brand text-black px-8 py-4 rounded-xl font-black text-sm hover:brightness-110 transition-all group"
+        >
+          Meet The Team
+          <ChevronRight className="w-4 h-4 stroke-[3] group-hover:translate-x-1 transition-transform" />
+        </button>
+      </div>
+
+      {/* RIGHT — Partner Cards */}
+      <div className="grid grid-cols-3 gap-4">
+
+        {/* Partner A */}
+        <div className="relative bg-neutral-900 border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-brand/30 hover:bg-neutral-800/60 transition-all group">
+          {/* Avatar */}
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand/60 to-brand/20 border-2 border-brand/40 flex items-center justify-center mb-5 overflow-hidden group-hover:border-brand/70 transition-all">
+            {/* Replace src with real image later */}
+            <span className="text-black font-black text-2xl">A</span>
+          </div>
+          <span className="text-brand text-[10px] font-black uppercase tracking-[0.2em] mb-3">Partner 01</span>
+          <p className="text-white/70 text-xs leading-relaxed">
+            Content Creators<br />& Strategists
+          </p>
+        </div>
+
+        {/* Partner B */}
+        <div className="relative bg-neutral-900 border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-brand/30 hover:bg-neutral-800/60 transition-all group">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand/60 to-brand/20 border-2 border-brand/40 flex items-center justify-center mb-5 overflow-hidden group-hover:border-brand/70 transition-all">
+            <span className="text-black font-black text-2xl">B</span>
+          </div>
+          <span className="text-brand text-[10px] font-black uppercase tracking-[0.2em] mb-3">Partner 02</span>
+          <p className="text-white/70 text-xs leading-relaxed">
+            Designers<br />& Storytellers
+          </p>
+        </div>
+
+        {/* Partner C */}
+        <div className="relative bg-neutral-900 border border-white/5 rounded-2xl p-6 flex flex-col items-center text-center hover:border-brand/30 hover:bg-neutral-800/60 transition-all group">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand/60 to-brand/20 border-2 border-brand/40 flex items-center justify-center mb-5 overflow-hidden group-hover:border-brand/70 transition-all">
+            <span className="text-black font-black text-2xl">C</span>
+          </div>
+          <span className="text-brand text-[10px] font-black uppercase tracking-[0.2em] mb-3">Partner 03</span>
+          <p className="text-white/70 text-xs leading-relaxed">
+            Ads Experts<br />& Data Driven
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    {/* MARQUEE TICKER */}
+    <div className="mt-20 -mx-6 md:-mx-10 overflow-hidden border-y border-brand/30 bg-brand py-3">
+      <div className="flex animate-marquee whitespace-nowrap">
+        {['CONTENT CREATION', 'VIDEO EDITING', 'PAID ADS', 'SOCIAL MEDIA MANAGEMENT', 'BRAND GROWTH', 'GRAPHIC DESIGN'].flatMap((t, i) => [
+          <span key={`a-${i}`} className="text-black font-black text-xs uppercase tracking-[0.25em] mx-8">{t}</span>,
+          <span key={`dot-a-${i}`} className="text-black font-black text-base mx-2">•</span>
+        ]).concat(
+          ['CONTENT CREATION', 'VIDEO EDITING', 'PAID ADS', 'SOCIAL MEDIA MANAGEMENT', 'BRAND GROWTH', 'GRAPHIC DESIGN'].flatMap((t, i) => [
+            <span key={`b-${i}`} className="text-black font-black text-xs uppercase tracking-[0.25em] mx-8">{t}</span>,
+            <span key={`dot-b-${i}`} className="text-black font-black text-base mx-2">•</span>
+          ])
+        )}
+      </div>
+    </div>
+
+  </div>
+</section>
         {/* FILTER BAR */}
         <div className="relative w-full z-20 mt-8">
           <div className="bg-[#0a0a0a] border-t border-b border-white/5 px-6 md:px-10 py-3 flex flex-wrap justify-start md:justify-center items-center gap-2 max-w-[1440px] mx-auto">
@@ -256,7 +349,7 @@ export default function App() {
         </div>
 
       </main>
-
+              
       {/* PORTFOLIO SHOWCASE SECTION */}
       <section className="max-w-[1440px] mx-auto px-6 md:px-10 pt-28 pb-32" id="work-section">
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -390,7 +483,75 @@ export default function App() {
           ))}
         </div>
       </section>
+          {/* UGC CONTENT SECTION */}
+<section className="relative py-24 md:py-32 overflow-hidden" id="ugc-section">
+  <div className="max-w-[1440px] mx-auto px-6 md:px-10">
 
+    {/* Header */}
+    <div className="mb-14">
+      <div className="flex items-center gap-3 mb-5">
+        <div className="w-8 h-[2px] bg-brand" />
+        <span className="text-brand uppercase tracking-[0.3em] text-xs font-black">UGC Content</span>
+      </div>
+      <h2 className="text-5xl md:text-6xl xl:text-7xl font-black leading-[1.0] uppercase tracking-tight mb-6">
+        USER GENERATED<br />
+        <span className="text-brand">CONTENT</span>
+      </h2>
+      <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-lg">
+        Authentic, relatable content built to earn trust and drive real engagement. UGC that feels real — because it is.
+      </p>
+    </div>
+
+    {/* Video Cards Grid */}
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      {[
+        { label: 'Restaurant Review', src: '' },
+        { label: 'Product Unboxing', src: '' },
+        { label: 'Before & After', src: '' },
+        { label: 'Brand Story', src: '' },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="relative group bg-neutral-900 border border-white/5 rounded-2xl overflow-hidden hover:border-brand/40 transition-all duration-300"
+          style={{ aspectRatio: '9/16' }}
+        >
+          {/* UGC Badge */}
+          <div className="absolute top-3 left-3 z-10">
+            <span className="bg-brand text-black text-[10px] font-black uppercase px-2.5 py-1 rounded-md tracking-wider">
+              UGC
+            </span>
+          </div>
+
+          {/* Video or Placeholder */}
+          {item.src ? (
+            <video
+              src={item.src}
+              className="w-full h-full object-cover"
+              loop
+              muted
+              playsInline
+              onMouseEnter={e => (e.currentTarget as HTMLVideoElement).play()}
+              onMouseLeave={e => { (e.currentTarget as HTMLVideoElement).pause(); (e.currentTarget as HTMLVideoElement).currentTime = 0; }}
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-neutral-900 to-neutral-950">
+              <div className="w-14 h-14 rounded-full border-2 border-brand/30 flex items-center justify-center group-hover:border-brand/60 transition-all">
+                <PlayCircle className="w-7 h-7 text-brand/50 group-hover:text-brand transition-all" />
+              </div>
+              <span className="text-white/20 text-[11px] font-medium uppercase tracking-widest">Coming Soon</span>
+            </div>
+          )}
+
+          {/* Bottom Label */}
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+            <p className="text-white font-black text-xs uppercase tracking-wide">{item.label}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
       {/* PROCESS OF EDITING STEP-BY-STEP */}
 <section className="max-w-[1440px] mx-auto px-6 md:px-10 mb-32" id="process-section">
   <div className="border border-white/5 bg-neutral-950/60 backdrop-blur-md rounded-[24px] p-8 md:p-12">
